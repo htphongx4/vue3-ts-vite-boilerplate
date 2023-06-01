@@ -14,7 +14,6 @@
     "tailwind-viewer": "tailwind-config-viewer -o",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -s public -o dist/storybook",
-    "build-vercel": "yarn build && yarn build-storybook",
     "prepare": "husky install"
   },
   "dependencies": {
