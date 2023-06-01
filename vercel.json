@@ -1,0 +1,9 @@
+{
+    "buildCommand": "yarn build-vercel",
+    "rewrites": [
+        {
+            "source": "/:path*",
+            "destination": "/index.html"
+        }
+    ]
+}

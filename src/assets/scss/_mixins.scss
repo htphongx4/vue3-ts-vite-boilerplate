@@ -1,0 +1,180 @@
+@mixin m-btn-bgr($bgr, $color, $bgr-activated: $color, $color-activated: $bgr) {
+  background-color: $bgr;
+  color: $color;
+  font-weight: bold;
+
+  &:hover {
+    background-color: $bgr-activated;
+    color: $color-activated;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@function breakpoints($breakpoint) {
+  @return map-get($grid-breakpoints, $breakpoint);
+}
+
+$grid-breakpoints: (
+  xxs: 360px,
+  xs: 481px,
+  sm: 768px,
+  smplus: 769px,
+  md: 992px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1450px,
+  xxxl: 1650px,
+  largeDesktop: 2000px
+);
+
+@mixin large-desktop {
+  @media screen and (min-width: #{breakpoints(largeDesktop)}) {
+    @content;
+  }
+}
+
+@mixin min-xxxl {
+  @media screen and (min-width: #{breakpoints(xxxl)}) {
+    @content;
+  }
+}
+
+@mixin min-xxl {
+  @media screen and (min-width: #{breakpoints(xxl)}) {
+    @content;
+  }
+}
+
+@mixin min-xl {
+  @media screen and (min-width: #{breakpoints(xl)}) {
+    @content;
+  }
+}
+
+@mixin min-lg {
+  @media screen and (min-width: #{breakpoints(lg)}) {
+    @content;
+  }
+}
+
+@mixin min-md {
+  @media (min-width: #{breakpoints(md)}) {
+    @content;
+  }
+}
+
+@mixin min-sm {
+  @media (min-width: #{breakpoints(sm)}) {
+    @content;
+  }
+}
+
+@mixin min-smplus {
+  @media (min-width: #{breakpoints(sm) + 1px}) {
+    @content;
+  }
+}
+
+@mixin min-xs {
+  @media screen and (min-width: #{breakpoints(xs)}) {
+    @content;
+  }
+}
+
+@mixin min-xxs {
+  @media screen and (min-width: #{breakpoints(xxs)}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{breakpoints(lg) + 1px}) {
+    @content;
+  }
+}
+
+@mixin scrollbar {
+  @include min-lg {
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #c8dff5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #1b77d2;
+    }
+
+    // &::-webkit-scrollbar,
+    // &::-webkit-scrollbar-track,
+    // &::-webkit-scrollbar-thumb {
+    //   visibility: hidden;
+    // }
+
+    &:hover {
+      &::-webkit-scrollbar,
+      &::-webkit-scrollbar-track,
+      &::-webkit-scrollbar-thumb {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@mixin background-shimmer(
+  $rotate: 90deg,
+  $base-color: white,
+  $shimmer-color: rgba(255, 255, 255, 0.6),
+  $speed: 2s
+) {
+  position: relative;
+  overflow: hidden;
+  background-color: $base-color;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      transparent 20%,
+      $shimmer-color 50%,
+      transparent 80%
+    );
+    animation: shimmer $speed infinite;
+  }
+}
+
+@mixin rules {
+  .rules {
+    font-size: 13px;
+    margin-left: 15px;
+    &__item {
+      margin-bottom: 15px;
+      list-style: disc;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+$mist: #e1e4e8;

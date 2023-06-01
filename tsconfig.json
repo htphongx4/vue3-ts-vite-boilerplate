@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "useUnknownInCatchVariables": false,
+    "lib": ["esnext", "dom"],
+    "skipLibCheck": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+      "@api/*": ["api/*"],
+      "@modules/*": ["modules/*"],
+      "@composables/*": ["composables/*"],
+      "@store/*": ["store/*"],
+      "@plugins/*": ["plugins/*"],
+      "@assets/*": ["assets/*"],
+      "@utils/*": ["utils/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

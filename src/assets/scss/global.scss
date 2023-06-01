@@ -1,0 +1,22 @@
+@import "./font";
+@import "./mixins";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato";
+}
+
+button {
+  outline: none;
+}
+
+.btn-check:focus + .btn,
+.btn:focus {
+  box-shadow: none;
+}

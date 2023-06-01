@@ -1,0 +1,26 @@
+name: Deploy App for Production
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    name: Checkout, Connect EC2, Build and Deploy App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v2
+
+      - name: Connect EC2 with SSH KEY
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+
+      - name: Build and Deploy App
+        id: build-image
+        run: |
+          make build-production
+          make start-production

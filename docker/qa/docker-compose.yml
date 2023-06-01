@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  with-docker-multi-env-testing:
+    build:
+      context: ../../
+      dockerfile: docker/qa/Dockerfile
+    image: with-docker-multi-env-qa
+    ports:
+      - '3002:80'

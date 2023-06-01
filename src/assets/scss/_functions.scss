@@ -1,0 +1,11 @@
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+@function breakpoints($breakpoint) {
+    @return map-get($grid-breakpoints, $breakpoint);
+}
+
+@function font($font-name) {
+    @return map-get($fonts, $font-name);
+}
