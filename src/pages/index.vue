@@ -14,8 +14,8 @@ import Container from "@/components/base/Container.vue";
 </script>
 
 <route lang="yaml">
-name: Category
+name: Home Page
 meta:
   requiresAuth: true
-  layout: 'dashboard'
+  layout: "dashboard"
 </route>

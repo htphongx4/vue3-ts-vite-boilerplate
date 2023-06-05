@@ -1,3 +1,26 @@
+<script lang="ts" setup>
+import { useGetProductDetails } from "@/api/products/query";
+import Container from "@/components/base/Container.vue";
+import Swiper from "@/components/base/Swiper.vue";
+import { formatMoney } from "@/utils/functions";
+import HeartIcon from "@/assets/svg/heart.svg?component";
+
+const {
+  params: { productId },
+} = useRoute();
+
+const { data: product } = useGetProductDetails(productId as string);
+
+const realPrice = computed(() => {
+  if (!product.value) return null;
+
+  const discountPercentagePrice =
+    (product.value?.price * product.value.discountPercentage) / 100;
+
+  return +(product.value.price + discountPercentagePrice).toFixed(0);
+});
+</script>
+
 <template>
   <Container>
     <section class="tw-text-gray-700 body-font tw-overflow-hidden tw-bg-white">
@@ -240,25 +263,9 @@
   </Container>
 </template>
 
-<script lang="ts" setup>
-import { useGetProductDetails } from "@/api/products/query";
-import Container from "@/components/base/Container.vue";
-import Swiper from "@/components/base/Swiper.vue";
-import { formatMoney } from "@/utils/functions";
-import HeartIcon from "@/assets/svg/heart.svg?component";
-
-const {
-  params: { productId },
-} = useRoute();
-
-const { data: product } = useGetProductDetails(productId as string);
-
-const realPrice = computed(() => {
-  if (!product.value) return null;
-
-  const discountPercentagePrice =
-    (product.value?.price * product.value.discountPercentage) / 100;
-
-  return +(product.value.price + discountPercentagePrice).toFixed(0);
-});
-</script>
+<route lang="yaml">
+name: Product Details
+meta:
+  requiresAuth: true
+  layout: "dashboard"
+</route>

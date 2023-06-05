@@ -1,11 +1,12 @@
 import { createApp } from "vue";
-import App from "@/App.vue";
-import router from "@/router";
-import interceptors from "@/plugins/interceptors";
 import axios from "axios";
 import { createPinia } from "pinia";
 import { VueQueryPlugin } from "vue-query";
 import mitt from "mitt";
+import App from "@/App.vue";
+import interceptors from "@/plugins/interceptors";
+import router from "@/router";
+
 // Tailwind CSS
 import "@/assets/css/index.css";
 

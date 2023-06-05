@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,ts,js}"],
   prefix: "tw-",
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     screens: {
       xs: "480",

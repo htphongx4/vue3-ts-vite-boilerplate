@@ -1,7 +1,7 @@
 <template>
   <div class="tw-grid tw-grid-cols-4 tw-gap-5">
     <div v-for="category in categories" :key="category">
-      <RouterLink :to="`/${category}`">
+      <RouterLink :to="`/category/${category}`">
         <div
           class="
             tw-px-4
