@@ -17,10 +17,13 @@ export const auth = async (
 
       if (user) {
         next();
+
+        return Promise.resolve(user);
       }
     } catch (error) {
       localStorage.removeItem(ACCESS_TOKEN_KEY);
       next(`/login?redirect=${to.path}`);
+      return Promise.reject(error);
     }
   } else {
     next(`/login?redirect=${to.path}`);

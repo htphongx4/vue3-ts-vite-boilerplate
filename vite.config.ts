@@ -1,10 +1,13 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
 import * as path from "path";
+import { defineConfig } from "vite";
+import Vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
-import svgLoader from "vite-svg-loader";
-import checker from "vite-plugin-checker";
+import SvgLoader from "vite-svg-loader";
+import { checker } from "vite-plugin-checker";
 import { visualizer } from "rollup-plugin-visualizer";
+import Pages from "vite-plugin-pages";
+import Layouts from "vite-plugin-vue-layouts";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -22,13 +25,15 @@ export default defineConfig({
     },
   },
   plugins: [
-    vue(),
-    svgLoader(),
+    Vue(),
+    Pages(),
+    Layouts(),
+    SvgLoader(),
     checker({
       typescript: true,
     }),
     visualizer({
-      emitFile: false
+      emitFile: false,
     }),
     AutoImport({
       include: [
@@ -60,9 +65,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: [
-        /^node:.*/,
-      ]
-    }
-  }
+      external: [/^node:.*/],
+    },
+  },
 });

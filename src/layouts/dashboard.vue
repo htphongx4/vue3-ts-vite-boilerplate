@@ -20,7 +20,4 @@ export default defineComponent({
 
 <script lang="ts" setup>
 import Header from "@components/base/Header.vue";
-import Container from "@/components/base/Container.vue";
 </script>
-
-<style scoped></style>

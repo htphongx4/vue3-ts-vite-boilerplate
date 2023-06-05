@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "plugin:vue/base",
+    "plugin:vue/essential",
+    "plugin:import/recommended",
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended",
+    "@vue/typescript/recommended",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "import/named": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"]
+      }
+    ],
+    "import/extensions": ["off", "ignorePackages"],
+    "@typescript-eslint/no-var-requires": "off",
+    "import/prefer-default-export": "off",
+    "no-useless-computed-key": "off",
+    "implicit-arrow-linebreak": "off",
+    "dot-notation": "off",
+    "function-paren-newline": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/ban-types": "off",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "import/no-unresolved": "off",
+    "vue/multi-word-component-names": "off"
+  }
+}

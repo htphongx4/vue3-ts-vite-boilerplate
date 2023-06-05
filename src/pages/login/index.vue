@@ -1,3 +1,37 @@
+<script lang="ts" setup>
+import { useForm, useField } from "vee-validate";
+import * as yup from "yup";
+import AuthTemplate from "@modules/auth/AuthTemplate.vue";
+import MyInput from "@/components/common/my-input/index.vue";
+import { useAuth } from "@/composables/useAuth";
+import { IError } from "@/types/error.types";
+
+export interface LoginForm {
+  username: string;
+  password: string;
+}
+
+const { isSignInLoading, signInError, signIn } = useAuth();
+
+const validationSchema = yup.object({
+  username: yup.string().required("Username is required"),
+  password: yup
+    .string()
+    .required("Password is required")
+    .min(6, "Password must be at least 6 characters"),
+});
+
+const { handleSubmit } = useForm<LoginForm>({ validationSchema });
+const { value: username, errorMessage: usernameError } =
+  useField<string>("username");
+const { value: password, errorMessage: passwordError } =
+  useField<string>("password");
+
+const onLogin = handleSubmit(async (values) => {
+  signIn(values);
+});
+</script>
+
 <template>
   <AuthTemplate>
     <div class="tw-text-center">
@@ -95,39 +129,5 @@
     </form>
   </AuthTemplate>
 </template>
-
-<script lang="ts" setup>
-import { useForm, useField } from "vee-validate";
-import * as yup from "yup";
-import AuthTemplate from "@modules/auth/AuthTemplate.vue";
-import MyInput from "@/components/common/my-input/index.vue";
-import { useAuth } from "@/composables/useAuth";
-import { IError } from "@/types/error.types";
-
-export interface LoginForm {
-  username: string;
-  password: string;
-}
-
-const { isSignInLoading, signInError, signIn } = useAuth();
-
-const validationSchema = yup.object({
-  username: yup.string().required("Username is required"),
-  password: yup
-    .string()
-    .required("Password is required")
-    .min(6, "Password must be at least 6 characters"),
-});
-
-const { handleSubmit } = useForm<LoginForm>({ validationSchema });
-const { value: username, errorMessage: usernameError } =
-  useField<string>("username");
-const { value: password, errorMessage: passwordError } =
-  useField<string>("password");
-
-const onLogin = handleSubmit(async (values) => {
-  signIn(values);
-});
-</script>
 
 <style></style>
