@@ -29,13 +29,12 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
 ## Build app with Docker compose
+
 - To build PRODUCTION
-  * Run `make build-production`
-  * To start app `make start-production`
-  * To stop container `make stop-production`
-  
+  - Run `make build-production`
+  - To start app `make start-production`
+  - To stop container `make stop-production`
 - To build QA - For testing env
-  * Run `make build-qa`
-  * To start app `make start-qa`
-  * To stop container `make stop-qa`
-  
+  - Run `make build-qa`
+  - To start app `make start-qa`
+  - To stop container `make stop-qa`

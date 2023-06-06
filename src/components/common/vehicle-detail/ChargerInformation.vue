@@ -1,8 +1,8 @@
 <template>
   <!-- Modal -->
   <div
-    class="modal fade"
     id="exampleModal"
+    class="modal fade"
     tabindex="-1"
     aria-labelledby="exampleModalLabel"
     aria-hidden="true"
@@ -38,20 +38,20 @@
     </div>
     <div class="tw-p-4 tw-w-1/2">
       <ChargerInput
-        labelInput="Charger Name"
         v-model="chargerName"
-        requiredField
+        label-input="Charger Name"
+        required-field
       />
       <ChargerInput
-        labelInput="Charger Number"
         v-model="chargerNumber"
-        requiredField
+        label-input="Charger Number"
+        required-field
       />
-      <ChargerInput labelInput="Model" v-model="chargerModel" requiredField />
+      <ChargerInput v-model="chargerModel" label-input="Model" required-field />
       <ChargerInput
-        labelInput="Location"
         v-model="chargerLocation"
-        requiredField
+        label-input="Location"
+        required-field
       />
       <div class="tw-flex">
         <div class="tw-font-bold tw-mr-4">
@@ -59,10 +59,10 @@
         </div>
         <div class="form-check form-switch tw-flex">
           <input
-            class="form-check-input"
-            type="checkbox"
             id="flexSwitchCheckDefault"
             v-model="switchStatus"
+            class="form-check-input"
+            type="checkbox"
           />
         </div>
       </div>
@@ -77,11 +77,4 @@ const chargerNumber = ref("");
 const chargerModel = ref("");
 const chargerLocation = ref("");
 const switchStatus = ref(false);
-</script>
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "Charger Information",
-});
 </script>

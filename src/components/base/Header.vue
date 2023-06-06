@@ -27,16 +27,7 @@
 
           <div class="tw-ml-2 tw-flex">
             <div
-              class="
-                tw-flex
-                tw-cursor-pointer
-                tw-items-center
-                tw-gap-x-1
-                tw-rounded-md
-                tw-py-2
-                tw-px-4
-                hover:tw-bg-gray-100
-              "
+              class="tw-flex tw-cursor-pointer tw-items-center tw-gap-x-1 tw-rounded-md tw-py-2 tw-px-4 hover:tw-bg-gray-100"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,16 +46,7 @@
             </div>
 
             <div
-              class="
-                tw-flex
-                tw-cursor-pointer
-                tw-items-center
-                tw-gap-x-1
-                tw-rounded-md
-                tw-py-2
-                tw-px-4
-                hover:tw-bg-gray-100
-              "
+              class="tw-flex tw-cursor-pointer tw-items-center tw-gap-x-1 tw-rounded-md tw-py-2 tw-px-4 hover:tw-bg-gray-100"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,16 +65,7 @@
 
             <RouterLink to="/cart">
               <div
-                class="
-                  tw-flex
-                  tw-cursor-pointer
-                  tw-items-center
-                  tw-gap-x-1
-                  tw-rounded-md
-                  tw-py-2
-                  tw-px-4
-                  hover:tw-bg-gray-100
-                "
+                class="tw-flex tw-cursor-pointer tw-items-center tw-gap-x-1 tw-rounded-md tw-py-2 tw-px-4 hover:tw-bg-gray-100"
               >
                 <div class="tw-relative">
                   <svg
@@ -106,21 +79,7 @@
                     />
                   </svg>
                   <span
-                    class="
-                      tw-absolute
-                      tw--top-2
-                      tw--right-2
-                      tw-flex
-                      tw-h-4
-                      tw-w-4
-                      tw-items-center
-                      tw-justify-center
-                      tw-rounded-full
-                      tw-bg-red-500
-                      tw-p-2
-                      tw-text-xs
-                      tw-text-white
-                    "
+                    class="tw-absolute tw--top-2 tw--right-2 tw-flex tw-h-4 tw-w-4 tw-items-center tw-justify-center tw-rounded-full tw-bg-red-500 tw-p-2 tw-text-xs tw-text-white"
                   >
                     {{ cart?.totalProducts }}
                   </span>
@@ -135,36 +94,14 @@
 
             <div
               v-if="loggedIn"
-              class="
-                tw-ml-2
-                tw-flex
-                tw-cursor-pointer
-                tw-items-center
-                tw-gap-x-1
-                tw-rounded-md
-                tw-border
-                tw-py-2
-                tw-px-4
-                hover:tw-bg-gray-100
-              "
+              class="tw-ml-2 tw-flex tw-cursor-pointer tw-items-center tw-gap-x-1 tw-rounded-md tw-border tw-py-2 tw-px-4 hover:tw-bg-gray-100"
               @click="signOut"
             >
               <span class="tw-text-sm tw-font-medium"> Sign out </span>
             </div>
             <RouterLink v-else to="/login">
               <div
-                class="
-                  tw-ml-2
-                  tw-flex
-                  tw-cursor-pointer
-                  tw-items-center
-                  tw-gap-x-1
-                  tw-rounded-md
-                  tw-border
-                  tw-py-2
-                  tw-px-4
-                  hover:tw-bg-gray-100
-                "
+                class="tw-ml-2 tw-flex tw-cursor-pointer tw-items-center tw-gap-x-1 tw-rounded-md tw-border tw-py-2 tw-px-4 hover:tw-bg-gray-100"
               >
                 <span class="tw-text-sm tw-font-medium"> Sign in </span>
               </div>
@@ -176,19 +113,10 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-
-import { useAuth } from "@/composables/useAuth";
-
-export default defineComponent({
-  name: "Header",
-});
-</script>
-
 <script setup lang="ts">
 import Container from "./Container.vue";
 import { useGetUserCarts } from "@/api/products/query";
+import { useAuth } from "@/composables/useAuth";
 
 const { user, loggedIn, signOut } = useAuth();
 const { data: cart } = useGetUserCarts(user.value.id);

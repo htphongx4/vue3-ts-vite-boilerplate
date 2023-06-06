@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useListProductsInfiniteQuery } from "@/api/products/query";
 import { Waypoint } from "vue-waypoint";
+import { useListProductsInfiniteQuery } from "@/api/products/query";
 import ProductItem from "./ProductItem.vue";
 
 const router = useRouter();
@@ -37,9 +37,9 @@ const goProfile = () => {
         class="products-group"
       >
         <div
-          class="tw-px-6 tw-py-3 tw-bg-gray-100 tw-gap-10"
           v-for="product in productsGroup.products"
           :key="product.id"
+          class="tw-px-6 tw-py-3 tw-bg-gray-100 tw-gap-10"
           @click="goProfile"
         >
           <ProductItem :product="product" />
@@ -50,17 +50,7 @@ const goProfile = () => {
         <div>
           <div
             role="status"
-            class="
-              tw-max-w-sm
-              tw-p-4
-              tw-border
-              tw-border-gray-200
-              tw-rounded
-              tw-shadow
-              tw-animate-pulse
-              md:tw-p-6
-              dark:tw-border-gray-700
-            "
+            class="tw-max-w-sm tw-p-4 tw-border tw-border-gray-200 tw-rounded tw-shadow tw-animate-pulse md:tw-p-6 dark:tw-border-gray-700"
           >
             <div class="tw-flex tw-items-center tw-mt-4 tw-space-x-3">
               <svg
@@ -78,17 +68,10 @@ const goProfile = () => {
               </svg>
               <div>
                 <div
-                  class="
-                    tw-h-2.5 tw-bg-gray-200 tw-rounded-full
-                    dark:tw-bg-gray-700
-                    tw-w-32 tw-mb-2
-                  "
+                  class="tw-h-2.5 tw-bg-gray-200 tw-rounded-full dark:tw-bg-gray-700 tw-w-32 tw-mb-2"
                 ></div>
                 <div
-                  class="
-                    tw-w-48 tw-h-2 tw-bg-gray-200 tw-rounded-full
-                    dark:tw-bg-gray-700
-                  "
+                  class="tw-w-48 tw-h-2 tw-bg-gray-200 tw-rounded-full dark:tw-bg-gray-700"
                 ></div>
               </div>
             </div>

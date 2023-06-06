@@ -6,5 +6,4 @@
 import AuthTemplate from "@modules/auth/AuthTemplate.vue";
 </script>
 
-<style>
-</style>
+<style></style>

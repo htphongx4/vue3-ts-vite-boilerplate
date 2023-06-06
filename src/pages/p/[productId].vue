@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { useGetProductDetails } from "@/api/products/query";
 import Container from "@/components/base/Container.vue";
-import Swiper from "@/components/base/Swiper.vue";
 import { formatMoney } from "@/utils/functions";
 import HeartIcon from "@/assets/svg/heart.svg?component";
+import AppSwiper from "@/components/base/AppSwiper.vue";
 
 const {
   params: { productId },
@@ -27,44 +27,21 @@ const realPrice = computed(() => {
       <div class="tw-px-5 tw-py-10">
         <div class="tw-mx-auto tw-flex tw-flex-wrap">
           <div
-            class="
-              lg:tw-w-5/12
-              tw-w-full
-              tw-object-cover
-              tw-object-center
-              tw-rounded
-              tw-border
-              tw-border-gray-200
-              tw-bg-black
-            "
+            class="lg:tw-w-5/12 tw-w-full tw-object-cover tw-object-center tw-rounded tw-border tw-border-gray-200 tw-bg-black"
           >
-            <Swiper :images="product?.images ?? []" />
+            <AppSwiper :images="product?.images ?? []" />
           </div>
 
           <div
-            class="
-              lg:tw-w-7/12
-              tw-w-full
-              lg:tw-pl-10 lg:tw-py-6
-              tw-mt-6
-              lg:tw-mt-0
-            "
+            class="lg:tw-w-7/12 tw-w-full lg:tw-pl-10 lg:tw-py-6 tw-mt-6 lg:tw-mt-0"
           >
             <h2
-              class="
-                tw-text-sm
-                title-font
-                tw-text-gray-500 tw-tracking-widest tw-capitalize
-              "
+              class="tw-text-sm title-font tw-text-gray-500 tw-tracking-widest tw-capitalize"
             >
               {{ product?.brand }}
             </h2>
             <h1
-              class="
-                tw-text-gray-900 tw-text-3xl
-                title-font
-                tw-font-medium tw-mb-1 tw-capitalize
-              "
+              class="tw-text-gray-900 tw-text-3xl title-font tw-font-medium tw-mb-1 tw-capitalize"
             >
               {{ product?.title }}
             </h1>
@@ -140,14 +117,7 @@ const realPrice = computed(() => {
                 </span>
               </span>
               <span
-                class="
-                  tw-flex
-                  tw-ml-3
-                  tw-pl-3
-                  tw-py-2
-                  tw-border-l-2
-                  tw-border-gray-200
-                "
+                class="tw-flex tw-ml-3 tw-pl-3 tw-py-2 tw-border-l-2 tw-border-gray-200"
               >
                 <a class="tw-text-gray-500">
                   <svg
@@ -200,58 +170,24 @@ const realPrice = computed(() => {
             <div class="tw-flex tw-items-center">
               <div class="tw-flex tw-items-end tw-mb-2">
                 <p
-                  class="
-                    tw-text-2xl tw-font-bold
-                    text-slate-900
-                    tw-mr-4 tw-text-red-500
-                  "
+                  class="tw-text-2xl tw-font-bold text-slate-900 tw-mr-4 tw-text-red-500"
                 >
                   {{ formatMoney(product?.price ?? 0) }}
                 </p>
                 <p
-                  class="
-                    title-font
-                    tw-font-medium
-                    tw-text-lg
-                    tw-text-gray-900
-                    tw-line-through
-                    tw-mb-1
-                  "
+                  class="title-font tw-font-medium tw-text-lg tw-text-gray-900 tw-line-through tw-mb-1"
                 >
                   {{ formatMoney(realPrice ?? 0) }}
                 </p>
               </div>
 
               <button
-                class="
-                  tw-flex
-                  tw-ml-auto
-                  tw-text-white
-                  tw-bg-red-500
-                  tw-border-0
-                  tw-py-2
-                  tw-px-6
-                  focus:tw-outline-none
-                  hover:tw-bg-red-600
-                  tw-rounded
-                "
+                class="tw-flex tw-ml-auto tw-text-white tw-bg-red-500 tw-border-0 tw-py-2 tw-px-6 focus:tw-outline-none hover:tw-bg-red-600 tw-rounded"
               >
                 Add to Cart
               </button>
               <button
-                class="
-                  tw-rounded-full
-                  tw-w-10
-                  tw-h-10
-                  tw-bg-gray-200
-                  tw-p-0
-                  tw-border-0
-                  tw-inline-flex
-                  tw-items-center
-                  tw-justify-center
-                  tw-text-gray-500
-                  tw-ml-4
-                "
+                class="tw-rounded-full tw-w-10 tw-h-10 tw-bg-gray-200 tw-p-0 tw-border-0 tw-inline-flex tw-items-center tw-justify-center tw-text-gray-500 tw-ml-4"
               >
                 <HeartIcon />
               </button>

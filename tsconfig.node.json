@@ -4,7 +4,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
-    "useUnknownInCatchVariables": false,
+    "useUnknownInCatchVariables": false
   },
   "include": ["vite.config.ts"]
 }

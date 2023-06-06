@@ -20,7 +20,7 @@
       :prevent-clicks-propagation="false"
       @swiper="setThumbsSwiper"
     >
-      <swiper-slide class="slide" v-for="(image, index) in images" :key="image">
+      <swiper-slide v-for="image in images" :key="image" class="slide">
         <img :src="image" :alt="image" />
       </swiper-slide>
     </swiper>

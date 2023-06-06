@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   with-docker-multi-env-testing:
@@ -7,4 +7,4 @@ services:
       dockerfile: docker/qa/Dockerfile
     image: with-docker-multi-env-qa
     ports:
-      - '3002:80'
+      - "3002:80"

@@ -22,5 +22,5 @@ export interface IProductsListResponse {
   products: IProduct[];
   total: number;
   skip: number;
-  limit: number
+  limit: number;
 }
