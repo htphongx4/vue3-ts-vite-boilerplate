@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import SwiperClass, { Pagination, Navigation, Thumbs } from "Swiper";
+import SwiperClass, { Pagination, Navigation, Thumbs } from "swiper";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 interface IProps {
   images: string[];
