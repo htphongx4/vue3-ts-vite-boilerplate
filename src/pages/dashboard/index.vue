@@ -17,5 +17,5 @@ import Container from "@/components/base/Container.vue";
 name: Category
 meta:
   requiresAuth: true
-  layout: 'dashboard'
+  layout: "dashboard"
 </route>

@@ -33,5 +33,5 @@ export {
   Register,
   CategoryPage,
   CartPage,
-  ProductPage
+  ProductPage,
 };

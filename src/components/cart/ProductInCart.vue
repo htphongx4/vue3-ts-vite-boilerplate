@@ -1,9 +1,6 @@
 <template>
   <div
-    class="
-      tw-justify-between tw-mb-6 tw-rounded-lg tw-bg-white tw-p-6 tw-shadow-md
-      sm:tw-flex sm:tw-justify-start
-    "
+    class="tw-justify-between tw-mb-6 tw-rounded-lg tw-bg-white tw-p-6 tw-shadow-md sm:tw-flex sm:tw-justify-start"
   >
     <img
       :src="product.title"
@@ -15,52 +12,27 @@
         <h2 class="tw-text-lg tw-font-bold tw-text-gray-900">
           {{ product.title }}
         </h2>
-        <p class="tw-mt-1 tw-text-xs tw-text-gray-700">{{ formatMoney(product.price) }} / item</p>
+        <p class="tw-mt-1 tw-text-xs tw-text-gray-700">
+          {{ formatMoney(product.price) }} / item
+        </p>
       </div>
       <div
-        class="
-          tw-mt-4 tw-flex tw-justify-between
-          sm:tw-space-y-6 sm:tw-mt-0 sm:tw-block sm:tw-space-x-6
-        "
+        class="tw-mt-4 tw-flex tw-justify-between sm:tw-space-y-6 sm:tw-mt-0 sm:tw-block sm:tw-space-x-6"
       >
         <div class="tw-flex tw-items-center tw-border-gray-100">
           <span
-            class="
-              tw-cursor-pointer
-              tw-rounded-l
-              tw-bg-gray-100
-              tw-py-1
-              tw-px-3.5
-              tw-duration-100
-              hover:tw-bg-blue-500 hover:tw-text-blue-50
-            "
+            class="tw-cursor-pointer tw-rounded-l tw-bg-gray-100 tw-py-1 tw-px-3.5 tw-duration-100 hover:tw-bg-blue-500 hover:tw-text-blue-50"
           >
             -
           </span>
           <input
-            class="
-              tw-h-8
-              tw-w-8
-              tw-border
-              tw-bg-white
-              tw-text-center
-              tw-text-xs
-              tw-outline-none
-            "
+            class="tw-h-8 tw-w-8 tw-border tw-bg-white tw-text-center tw-text-xs tw-outline-none"
             type="number"
             :value="product.quantity"
             min="1"
           />
           <span
-            class="
-              tw-cursor-pointer
-              tw-rounded-r
-              tw-bg-gray-100
-              tw-py-1
-              tw-px-3
-              tw-duration-100
-              hover:tw-bg-blue-500 hover:tw-text-blue-50
-            "
+            class="tw-cursor-pointer tw-rounded-r tw-bg-gray-100 tw-py-1 tw-px-3 tw-duration-100 hover:tw-bg-blue-500 hover:tw-text-blue-50"
           >
             +
           </span>
@@ -73,10 +45,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="
-              tw-h-5 tw-w-5 tw-cursor-pointer tw-duration-150
-              hover:tw-text-red-500
-            "
+            class="tw-h-5 tw-w-5 tw-cursor-pointer tw-duration-150 hover:tw-text-red-500"
           >
             <path
               stroke-linecap="round"

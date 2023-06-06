@@ -1,4 +1,4 @@
-import '../src/assets/css/index.css';
+import "../src/assets/css/index.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -57,7 +57,16 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['General', 'Hygiene', 'PLP', 'PDP', 'Checkout', 'Account', '🚧 WIP Below ⬇️', '*'],
+      order: [
+        "General",
+        "Hygiene",
+        "PLP",
+        "PDP",
+        "Checkout",
+        "Account",
+        "🚧 WIP Below ⬇️",
+        "*",
+      ],
     },
   },
 };

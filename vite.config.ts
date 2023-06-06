@@ -4,7 +4,7 @@ import Vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import SvgLoader from "vite-svg-loader";
 import { checker } from "vite-plugin-checker";
-import { visualizer } from "rollup-plugin-visualizer";
+// import { visualizer } from "rollup-plugin-visualizer";
 import Pages from "vite-plugin-pages";
 import Layouts from "vite-plugin-vue-layouts";
 
@@ -32,9 +32,9 @@ export default defineConfig({
     checker({
       typescript: true,
     }),
-    visualizer({
-      emitFile: false,
-    }),
+    // visualizer({
+    //   emitFile: false,
+    // }),
     AutoImport({
       include: [
         /\.[t]s?$/, // .ts
@@ -65,7 +65,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: [/^node:.*/],
+      external: ["Swiper"],
     },
   },
 });

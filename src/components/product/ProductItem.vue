@@ -1,18 +1,6 @@
 <template>
   <div
-    class="
-      tw-relative
-      tw-flex
-      tw-w-full
-      tw-max-w-xs
-      tw-flex-col
-      tw-overflow-hidden
-      tw-rounded-lg
-      tw-border
-      tw-border-grey-50
-      tw-bg-white
-      tw-shadow-md
-    "
+    class="tw-relative tw-flex tw-w-full tw-max-w-xs tw-flex-col tw-overflow-hidden tw-rounded-lg tw-border tw-border-grey-50 tw-bg-white tw-shadow-md"
   >
     <RouterLink :to="`/p/${product.id}`">
       <img
@@ -21,19 +9,7 @@
         alt="product image"
       />
       <span
-        class="
-          tw-absolute
-          tw-top-0
-          tw-left-0
-          tw-m-2
-          tw-rounded-full
-          tw-bg-black
-          tw-px-2
-          tw-text-center
-          tw-text-sm
-          tw-font-medium
-          tw-text-white
-        "
+        class="tw-absolute tw-top-0 tw-left-0 tw-m-2 tw-rounded-full tw-bg-black tw-px-2 tw-text-center tw-text-sm tw-font-medium tw-text-white"
       >
         {{ product.discountPercentage }}% OFF
       </span>
@@ -41,11 +17,7 @@
     <div class="tw-mt-4 tw-px-5 tw-pb-5">
       <RouterLink :to="`/p/${product.id}`">
         <h5
-          class="
-            tw-text-lg tw-tracking-tight
-            text-slate-900
-            tw-h-16 tw-capitalize
-          "
+          class="tw-text-lg tw-tracking-tight text-slate-900 tw-h-16 tw-capitalize"
         >
           {{ product.title }}
         </h5>
@@ -53,20 +25,12 @@
       <div class="tw-mt-2 tw-mb-5">
         <div class="tw-flex tw-items-end tw-mb-2">
           <p
-            class="
-              tw-text-xl tw-font-bold
-              text-slate-900
-              tw-mr-4 tw-text-red-500
-            "
+            class="tw-text-xl tw-font-bold text-slate-900 tw-mr-4 tw-text-red-500"
           >
             {{ formatMoney(product.price) }}
           </p>
           <p
-            class="
-              tw-text-sm
-              text-slate-900
-              tw-line-through tw-mb-2 tw-font-bold
-            "
+            class="tw-text-sm text-slate-900 tw-line-through tw-mb-2 tw-font-bold"
           >
             {{ formatMoney(realPrice) }}
           </p>
@@ -128,16 +92,7 @@
             ></path>
           </svg>
           <span
-            class="
-              tw-mr-2
-              tw-ml-3
-              tw-rounded
-              tw-bg-yellow-200
-              tw-px-2.5
-              tw-py-0.5
-              tw-text-xs
-              tw-font-semibold
-            "
+            class="tw-mr-2 tw-ml-3 tw-rounded tw-bg-yellow-200 tw-px-2.5 tw-py-0.5 tw-text-xs tw-font-semibold"
           >
             {{ product.rating }}
           </span>
@@ -145,22 +100,7 @@
       </div>
       <button
         href="#"
-        class="
-          tw-w-full
-          tw-flex
-          tw-font-bold
-          tw-items-center
-          tw-justify-center
-          tw-rounded-lg
-          tw-bg-slate-900
-          tw-px-5
-          tw-py-2.5
-          tw-text-center
-          tw-text-sm
-          tw-text-white
-          hover:tw-bg-gray-700
-          focus:tw-outline-none focus:tw-ring-4 focus:tw-ring-blue-300
-        "
+        class="tw-w-full tw-flex tw-font-bold tw-items-center tw-justify-center tw-rounded-lg tw-bg-slate-900 tw-px-5 tw-py-2.5 tw-text-center tw-text-sm tw-text-white hover:tw-bg-gray-700 focus:tw-outline-none focus:tw-ring-4 focus:tw-ring-blue-300"
         @click="onAddToCart"
       >
         <svg
@@ -191,7 +131,7 @@ import { formatMoney } from "@/utils/functions";
 const { product } = defineProps<{ product: IProduct }>();
 const { user } = useAuth();
 
-const { data, mutate } = useAddProductToCartMutation();
+const { mutate } = useAddProductToCartMutation();
 
 const realPrice = computed(() => {
   const discountPercentagePrice =

@@ -1,12 +1,17 @@
 <template>
-  <div v-if="isLoading" class="app-loading tw-flex tw-justify-center tw-items-center">
-    <div class="tw-w-12 tw-h-12 tw-border-4 tw-border-dashed tw-rounded-full tw-animate-spin dark:tw-border-violet-400"></div>
+  <div
+    v-if="isLoading"
+    class="app-loading tw-flex tw-justify-center tw-items-center"
+  >
+    <div
+      class="tw-w-12 tw-h-12 tw-border-4 tw-border-dashed tw-rounded-full tw-animate-spin dark:tw-border-violet-400"
+    ></div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import useStore from "@/store";
 import { storeToRefs } from "pinia";
+import useStore from "@/store";
 
 const { isLoading } = storeToRefs(useStore());
 </script>

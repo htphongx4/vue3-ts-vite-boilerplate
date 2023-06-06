@@ -24,7 +24,7 @@
           :is="item.icon"
           :color="activeRoute(item.to) ? '#fff' : '#6F7592'"
         />
-        <span class="tw-ml-4" v-if="isCollapse">{{ item.title }}</span>
+        <span v-if="isCollapse" class="tw-ml-4">{{ item.title }}</span>
       </router-link>
     </div>
   </div>

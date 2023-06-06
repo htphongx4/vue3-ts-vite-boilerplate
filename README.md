@@ -1,5 +1,8 @@
 # Boilerplate and Starter about Shopping Cart for Vue 3x, TypeScript, Vite, Vue Query, Docker and DummyJSON
 
+[Demo Link 1](https://vue3-ts-vite-boilerplate-five.vercel.app)
+[Demo Link 2](https://vue3-ts-vite-boilerplate.vercel.app)
+
 🚀 Boilerplate and Starter for Vue 3x, Vite, Tailwind CSS, Vue Query and TypeScript ⚡️ Made with developer experience first: Vue 3x, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commit Lint, VSCode, PostCSS, Tailwind CSS, DummyJSON.
 
 - 🚀 Sign In, Categories Page, Product Page
@@ -33,13 +36,12 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
 ## Build app with Docker compose
-- To build PRODUCTION
-  * Run `make build-production`
-  * To start app `make start-production`
-  * To stop container `make stop-production`
-  
-- To build QA - For testing env
-  * Run `make build-qa`
-  * To start app `make start-qa`
-  * To stop container `make stop-qa`
-  
+
+- To build `PRODUCTION`
+  - Run `make build-production`
+  - To start app `make start-production`
+  - To stop container `make stop-production`
+- To build `QA - For testing env`
+  - Run `make build-qa`
+  - To start app `make start-qa`
+  - To stop container `make stop-qa`

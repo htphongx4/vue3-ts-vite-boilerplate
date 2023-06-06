@@ -4,11 +4,7 @@
   >
     <div class="container tw-py-12 tw-px-6 tw-h-full">
       <div
-        class="
-          tw-flex tw-justify-center tw-items-center tw-flex-wrap tw-h-full
-          g-6
-          tw-text-gray-800
-        "
+        class="tw-flex tw-justify-center tw-items-center tw-flex-wrap tw-h-full g-6 tw-text-gray-800"
       >
         <div class="xl:tw-w-8/12">
           <div class="tw-block tw-bg-white tw-shadow-lg tw-rounded-lg">
@@ -19,13 +15,7 @@
                 </div>
               </div>
               <div
-                class="
-                  lg:tw-w-6/12
-                  tw-flex tw-items-center
-                  lg:tw-rounded-r-lg
-                  tw-rounded-b-lg
-                  lg:tw-rounded-bl-none
-                "
+                class="lg:tw-w-6/12 tw-flex tw-items-center lg:tw-rounded-r-lg tw-rounded-b-lg lg:tw-rounded-bl-none"
                 :style="{ background: bg }"
               >
                 <div

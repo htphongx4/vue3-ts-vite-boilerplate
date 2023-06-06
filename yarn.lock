@@ -11655,7 +11655,7 @@ svgo@^3.0.2:
 
 swiper@^9.3.2:
   version "9.3.2"
-  resolved "https://registry.npmjs.org/swiper/-/swiper-9.3.2.tgz"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-9.3.2.tgz#f29eddb17f231221c7727372637c44279174a4e1"
   integrity sha512-Kj9Z4kXRmJR3YT/Wj+XLWj8P6IcRt+WG38uL8M3/Wny7+6sV0TlP9vnE1X+Co9c7VzNooojWGnFa+Wf/9+CUMA==
   dependencies:
     ssr-window "^4.0.2"
@@ -12661,7 +12661,7 @@ vscode-uri@^3.0.2:
 
 vue-awesome-swiper@^5.0.1:
   version "5.0.1"
-  resolved "https://registry.npmjs.org/vue-awesome-swiper/-/vue-awesome-swiper-5.0.1.tgz"
+  resolved "https://registry.yarnpkg.com/vue-awesome-swiper/-/vue-awesome-swiper-5.0.1.tgz#ba0d20ec9ca4dff2b7b4e99592cf59308335dfcc"
   integrity sha512-mWjFJzUqA4lG+DmsmibvMpoiBnl+IH2SSeiiQ3i5M0t1y9FknTxnGT0DsMb2YdJLgjYMEK3sYOWzqgLnZMH8Lg==
 
 vue-demi@*:

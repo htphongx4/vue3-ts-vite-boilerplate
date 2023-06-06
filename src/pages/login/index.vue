@@ -69,22 +69,7 @@ const onLogin = handleSubmit(async (values) => {
       </div>
       <div class="tw-text-center tw-pt-1 tw-pb-1 tw-mt-6">
         <button
-          class="
-            tw-w-full
-            tw-flex
-            tw-font-bold
-            tw-items-center
-            tw-justify-center
-            tw-rounded-lg
-            tw-bg-blue-500
-            tw-px-5
-            tw-py-2.5
-            tw-text-center
-            tw-text-sm
-            tw-text-white
-            hover:tw-bg-blue-400
-            focus:tw-outline-none focus:tw-ring-4 focus:tw-ring-blue-300
-          "
+          class="tw-w-full tw-flex tw-font-bold tw-items-center tw-justify-center tw-rounded-lg tw-bg-blue-500 tw-px-5 tw-py-2.5 tw-text-center tw-text-sm tw-text-white hover:tw-bg-blue-400 focus:tw-outline-none focus:tw-ring-4 focus:tw-ring-blue-300"
           size="large"
           type="submit"
           :loading="isSignInLoading"
@@ -107,21 +92,7 @@ const onLogin = handleSubmit(async (values) => {
         </p>
         <router-link
           to="/register"
-          class="
-            tw-flex
-            tw-font-bold
-            tw-items-center
-            tw-justify-center
-            tw-rounded-lg
-            tw-bg-gray-400
-            tw-px-5
-            tw-py-2.5
-            tw-text-center
-            tw-text-sm
-            tw-text-white
-            hover:tw-bg-blue-400
-            focus:tw-outline-none focus:tw-ring-4 focus:tw-ring-blue-300
-          "
+          class="tw-flex tw-font-bold tw-items-center tw-justify-center tw-rounded-lg tw-bg-gray-400 tw-px-5 tw-py-2.5 tw-text-center tw-text-sm tw-text-white hover:tw-bg-blue-400 focus:tw-outline-none focus:tw-ring-4 focus:tw-ring-blue-300"
         >
           <button>Register</button>
         </router-link>
