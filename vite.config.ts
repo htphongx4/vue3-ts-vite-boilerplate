@@ -27,7 +27,9 @@ export default defineConfig({
   plugins: [
     Vue(),
     Pages(),
-    Layouts(),
+    Layouts({
+      defaultLayout: 'dashboard'
+    }),
     SvgLoader(),
     checker({
       typescript: true,

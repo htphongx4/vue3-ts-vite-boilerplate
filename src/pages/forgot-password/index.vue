@@ -7,3 +7,10 @@ import AuthTemplate from "@modules/auth/AuthTemplate.vue";
 </template>
 
 <style></style>
+
+<route lang="yaml">
+name: Forgot Password Page
+meta:
+  requiresAuth: false
+  layout: "default"
+</route>

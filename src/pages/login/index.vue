@@ -102,3 +102,10 @@ const onLogin = handleSubmit(async (values) => {
 </template>
 
 <style></style>
+
+<route lang="yaml">
+name: Login Page
+meta:
+  requiresAuth: false
+  layout: "default"
+</route>
