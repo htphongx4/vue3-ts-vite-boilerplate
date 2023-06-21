@@ -1,4 +1,4 @@
-# Boilerplate and Starter about Shopping Cart for Vue 3x, TypeScript, Vite, Vue Query, Docker and DummyJSON
+# Vue 3 Boilerplate - TypeScript, Tailwind CSS, Vite, Pinia, Vue Query, Docker, Vite Pages  and DummyJSON
 
 [Demo Link](https://vue3-vite-ts-boilerplate.vercel.app)
 
@@ -18,6 +18,8 @@
 - 💡 Absolute Imports using @ prefix
 - 🎁 Auto generate route in pages folder, same as Nextjs and Nuxtjs
 - 📏 Linter with ESLint for Vue, Typescript
+- 🚀 Implemented authentication
+- 💡 Axios interceptors
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
