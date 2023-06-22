@@ -2,7 +2,7 @@
 
 [Demo Link](https://vue3-vite-ts-boilerplate.vercel.app)
 
-🚀 Boilerplate and Starter for Vue 3x, Vite, Tailwind CSS, Vue Query and TypeScript ⚡️ Made with developer experience first: Vue 3x, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commit Lint, VSCode, PostCSS, Tailwind CSS, DummyJSON.
+🚀 Vue 3 Boilerplate - TypeScript, Tailwind CSS, Vite, Pinia, Vue Query, Docker, Vite Pages  and DummyJSON ⚡️ Made with developer experience first: ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commit Lint, VSCode, PostCSS
 
 - 🚀 Sign In, Categories Page, Product Page
 - ⚡ All configuration for api calling (using axios)
